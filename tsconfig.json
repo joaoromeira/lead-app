@@ -8,15 +8,23 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
-      "@app/*": ["./app/*"],
-      "@src/*": ["./src/*"]
+      "@lib/*": ["src/lib/*"],
+      "@core/*": ["src/core/*"],
+      "@presentation/*": ["src/core/presentation/*"],
+      "@domain/*": ["src/core/domain/*"],
+      "@infra/*": ["src/core/infra/*"],
+      "@vendor/*": ["src/core/vendor/*"],
+      "@use-cases/*": ["src/core/use-cases/*"],
+      "@src/*": ["src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
