@@ -15,15 +15,16 @@ declare namespace Cypress {
      */
     initApp(): Chainable<any>;
 
+    checkUserInTable(
+      email: string,
+      condition: 'exist' | 'not.exist'
+    ): Chainable<any>;
+
     deleteUser(email: string): Chainable<any>;
 
     fillForm(args?: FillForm): Chainable<any>;
 
     saveUser(): Chainable<any>;
-
-    verifyIfExistInTable(email: string): Chainable<any>;
-
-    verifyIfNotExistInTable(email: string): Chainable<any>;
 
     verifyIfFormAreCleared(): Chainable<any>;
   }

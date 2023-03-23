@@ -39,7 +39,7 @@ describe(
 
     context('Given that: user are saved and form are cleared', () => {
       it(`So: verify if user (${email}) exist in table`, () => {
-        cy.verifyIfExistInTable(email);
+        cy.checkUserInTable(email, 'exist');
       });
     });
 
@@ -51,7 +51,7 @@ describe(
 
     context('Given that: user are deleted', () => {
       it(`So: verify if user (${email}) not exist in table`, () => {
-        cy.verifyIfNotExistInTable(email);
+        cy.checkUserInTable(email, 'not.exist');
       });
     });
   }

@@ -2,7 +2,6 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   defaultCommandTimeout: 30000,
-
   env: {
     appUrl: 'http://localhost:3000',
     apiUrl: 'http://localhost:3000/api',
