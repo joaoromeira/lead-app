@@ -64,6 +64,7 @@ export const UserForm = ({ onSave }: UserFormProps): JSX.Element => {
           label="Name"
           name="name"
           placeholder="João"
+          data-cy="text-input-name"
           value={form.name}
           onChange={handleChangeTextInput}
         />
@@ -71,11 +72,17 @@ export const UserForm = ({ onSave }: UserFormProps): JSX.Element => {
           label="Email"
           name="email"
           type="email"
+          data-cy="text-input-email"
           placeholder="joao@example.com"
           value={form.email}
           onChange={handleChangeTextInput}
         />
-        <Button text="Save" type="submit" isLoading={createUser.isLoading} />
+        <Button
+          text="Save"
+          data-cy="button-save"
+          type="submit"
+          isLoading={createUser.isLoading}
+        />
       </form>
       {hasError && <ErrorAlert message="Please fill in all fields" />}
     </>

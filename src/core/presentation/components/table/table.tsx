@@ -24,7 +24,10 @@ export const Table = ({ cells, isLoading, isUpdating, rows }: TableProps) => {
       <div className="overflow-x-auto">
         <div className="inline-block w-full align-middle">
           <div className="overflow-hidden rounded-lg border">
-            <table className="min-w-full divide-y divide-gray-200">
+            <table
+              className="min-w-full divide-y divide-gray-200"
+              data-cy="table"
+            >
               <thead className="bg-gray-50">
                 <tr>
                   {cells.map((cell, index) => (
@@ -45,6 +48,7 @@ export const Table = ({ cells, isLoading, isUpdating, rows }: TableProps) => {
                       {cells.map(({ align, content }, cellIdx) => (
                         <td
                           key={cellIdx.toString()}
+                          data-cy="table-cell"
                           className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-800"
                         >
                           {typeof content === 'string' ? content : content(row)}

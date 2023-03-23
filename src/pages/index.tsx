@@ -33,7 +33,10 @@ const Home = (): JSX.Element => {
     {
       label: 'Actions',
       content: (user) => (
-        <DeleteButton onClick={() => deleteUser.mutate(user)} />
+        <DeleteButton
+          data-cy={`button-delete-${user.email}`}
+          onClick={() => deleteUser.mutate(user)}
+        />
       ),
     },
   ];

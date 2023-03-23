@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,16 +21,38 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@lib/*": ["src/lib/*"],
-      "@core/*": ["src/core/*"],
-      "@presentation/*": ["src/core/presentation/*"],
-      "@domain/*": ["src/core/domain/*"],
-      "@infra/*": ["src/core/infra/*"],
-      "@vendor/*": ["src/core/vendor/*"],
-      "@use-cases/*": ["src/core/use-cases/*"],
-      "@src/*": ["src/*"]
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@core/*": [
+        "src/core/*"
+      ],
+      "@presentation/*": [
+        "src/core/presentation/*"
+      ],
+      "@domain/*": [
+        "src/core/domain/*"
+      ],
+      "@infra/*": [
+        "src/core/infra/*"
+      ],
+      "@vendor/*": [
+        "src/core/vendor/*"
+      ],
+      "@use-cases/*": [
+        "src/core/use-cases/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

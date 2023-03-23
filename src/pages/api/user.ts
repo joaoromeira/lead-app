@@ -5,7 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   switch (req.method) {
     case HttpMethod.GET:
-      return res.json(await getUsers());
+      return res.status(200).json(await getUsers());
 
     case HttpMethod.POST:
       return res.status(201).json(await createUser(req.body));
