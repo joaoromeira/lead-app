@@ -1,25 +1,25 @@
-import { User } from '@domain/dtos/user';
+import { Lead } from '@core/domain/dtos/lead';
 import { HttpClient, HttpMethod } from '@domain/http-client/http-client';
 import { inject } from 'inversify';
 
-export type DeleteUserInput = {
+export type DeleteLeadInput = {
   id: number;
 };
 
-export type DeleteUserOutput = User;
+export type DeleteLeadOutput = Lead;
 
-export type DeleteUserResponse = User;
+export type DeleteLeadResponse = Lead;
 
-export class DeleteUser {
+export class DeleteLead {
   public constructor(
     @inject(HttpClient)
-    private readonly httpClient: HttpClient<DeleteUserResponse>
+    private readonly httpClient: HttpClient<DeleteLeadResponse>
   ) {}
 
-  public async execute(body: DeleteUserInput): Promise<DeleteUserOutput> {
+  public async execute(body: DeleteLeadInput): Promise<DeleteLeadOutput> {
     const response = await this.httpClient.request({
       method: HttpMethod.DELETE,
-      url: '/api/user',
+      url: '/api/lead',
       body,
     });
 

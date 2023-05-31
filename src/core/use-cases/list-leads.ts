@@ -1,21 +1,21 @@
-import { User } from '@domain/dtos/user';
+import { Lead } from '@core/domain/dtos/lead';
 import { HttpClient, HttpMethod } from '@domain/http-client/http-client';
 import { inject } from 'inversify';
 
-export type ListUsersOutput = User[];
+export type ListLeadsOutput = Lead[];
 
-export type ListUsersResponse = User[];
+export type ListLeadsResponse = Lead[];
 
-export class ListUsers {
+export class ListLeads {
   public constructor(
     @inject(HttpClient)
-    private readonly httpClient: HttpClient<ListUsersResponse>
+    private readonly httpClient: HttpClient<ListLeadsResponse>
   ) {}
 
-  public async execute(): Promise<ListUsersOutput> {
+  public async execute(): Promise<ListLeadsOutput> {
     const response = await this.httpClient.request({
       method: HttpMethod.GET,
-      url: '/api/user',
+      url: '/api/lead',
     });
 
     if (response.data === undefined) {

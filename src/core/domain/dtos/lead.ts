@@ -1,4 +1,4 @@
-export type User = {
+export type Lead = {
   id: number;
   name: string;
   email: string;

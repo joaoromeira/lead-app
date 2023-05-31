@@ -15,7 +15,12 @@ type TableProps = {
   cells: TableCells<any>;
 };
 
-export const Table = ({ cells, isLoading, isUpdating, rows }: TableProps) => {
+export const Table = ({
+  cells,
+  isLoading,
+  isUpdating,
+  rows = [],
+}: TableProps) => {
   const showLoader = isUpdating || isLoading;
   const showNoData = !showLoader && rows?.length === 0;
 
@@ -43,12 +48,13 @@ export const Table = ({ cells, isLoading, isUpdating, rows }: TableProps) => {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {!showLoader &&
-                  rows?.map((row, rowIdx) => (
+                  rows.map((row, rowIdx) => (
                     <tr key={rowIdx.toString()}>
                       {cells.map(({ align, content }, cellIdx) => (
                         <td
                           key={cellIdx.toString()}
                           data-cy="table-cell"
+                          data-testid="table-cell"
                           className="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-800"
                         >
                           {typeof content === 'string' ? content : content(row)}

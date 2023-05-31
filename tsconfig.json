@@ -42,6 +42,9 @@
       "@use-cases/*": [
         "src/core/use-cases/*"
       ],
+      "@mocks/*": [
+        "src/mocks/*"
+      ],
       "@src/*": [
         "src/*"
       ]

@@ -1,4 +1,4 @@
 export enum QueryKey {
-  createUser = 'createUser',
-  listUsers = 'listUsers',
+  createLead = 'createLead',
+  listLeads = 'listLeads',
 }

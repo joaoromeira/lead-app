@@ -1,7 +1,7 @@
-import { User } from './user';
+import { Lead } from './lead';
 
-export interface UserActions {
-  insert(user: User): Promise<User>;
-  delete(email: string): Promise<User | null>;
-  findAll(): Promise<User[]>;
+export interface LeadActions {
+  insert(lead: Lead): Promise<Lead>;
+  delete(email: string): Promise<Lead | null>;
+  findAll(): Promise<Lead[]>;
 }
