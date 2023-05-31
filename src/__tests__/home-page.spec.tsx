@@ -3,7 +3,7 @@ import { HttpStatusCode } from '@core/domain/http-client/http-client';
 import { HttpClientMock, useTestSetup } from '@mocks/use-test-setup';
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 
-import Home from './index';
+import Home from '../pages/index';
 
 it('Should render table with correct data', async () => {
   const httpClient = HttpClientMock.prototype;
